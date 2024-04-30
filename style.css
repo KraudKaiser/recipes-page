@@ -1,0 +1,196 @@
+@font-face {
+    font-family: young-serif;
+    src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+@font-face {
+    font-family: Outlet;
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+}
+@media (min-width:1440px) {   
+    body{
+        padding: 5% 15% 5% 15%;
+        background-color: hsl(30, 54%, 90%);
+    }
+    
+    article{
+        border-radius: 16px;
+        background-color: hsl(0, 0%, 100%);
+        padding: 4%;
+    }
+    .recipe-title{
+        & h1{
+            font-family: "young-serif";
+            font-size: 8.3vmin;
+        }
+        & p{
+            font-family: "Outlet";
+            font-size: 3.2vmin;
+        }
+        
+    }
+
+    .ingredients{
+        & ul{
+            font-size: 1.3vmin;
+        }
+    }
+
+    .instructions{
+        ol{
+            font-size: 3.2vmin;
+        }
+    }
+
+    .nutrition-table{
+        font-size: 3.1vmin;
+    }
+}
+
+@media screen and (min-width:375px){
+    body{
+        margin: 0;
+        height: 100dvh;
+    }
+    article{
+        font-family: Outlet;
+        box-sizing: border-box;
+        & img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+    }
+    header{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 2% 5% 2% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        & h1{
+            font-family: young-serif;
+            margin: 0;
+            font-size: 250%;
+        }
+
+        & p{
+            font-size: 5.1vmin;
+            font-weight: 400;
+            color:hsl(24, 5%, 18%);
+        }
+        
+    }
+    aside{
+        padding: 1% 4% 1% 4%;
+        border-radius: 8px;
+        background-color: hsl(330, 100%, 98%);
+        margin: 0 8% 0 8%;
+        
+        & h3{
+            color:hsl(332, 51%, 32%) ;
+            font-size: 4.5vmin;
+        }
+
+        & ul{
+            color:hsl(332, 51%, 32%) ;
+
+            & li{
+                padding: 3%;
+                font-size: 4.2vmin;
+                color: hsl(30, 10%, 34%);
+                & strong{
+                    color:hsl(24, 5%, 18%) ;
+                }
+            }
+        }
+
+        
+    }
+    
+    .ingredients{
+        margin: 0 5% 0 5%;
+        border-bottom: 1px solid hsl(30, 18%, 87%);
+        & h2{
+            font-size: 6.6vmin;
+            font-family: young-serif;
+            color: hsl(14, 45%, 36%);
+        }
+
+        & ul{
+            color: hsl(30, 10%, 34%);
+        }
+
+        & li{
+            font-size: 3.9vmin;
+            padding: 1% 6% 1% 8%;
+            text-wrap: wrap;
+        }
+    }
+
+    .instructions{
+        margin: 0 5% 0 5%;
+        
+        & h2{
+            font-size: 6.6vmin;
+            font-family: young-serif;
+            color: hsl(14, 45%, 36%);
+        }
+
+        & ol{
+            font-weight: 700;
+            color: hsl(14, 45%, 36%);
+            & li{
+                padding: 0 0 0 5%;
+                font-weight: 400;
+                color: hsl(30, 10%, 34%);
+                & strong{
+                    color: hsl(30, 10%, 34%);
+                }
+
+            }
+        }
+    }
+    
+    .nutrition{
+        margin: 0 5% 0 5%;   
+        & h2{
+            font-size: 6.6vmin;
+            font-family: young-serif;
+            color: hsl(14, 45%, 36%);
+        }
+
+        & p{
+            font-size: 4.1vmin;
+            color: hsl(30, 10%, 34%);
+        }
+        
+    }
+    .nutrition-table{
+        width: 100%;
+        thead{
+            tr{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 2%;
+                border-bottom: 1px solid black;
+                column-gap: 1em;
+                text-align: left;
+                th{
+                    width: 200px;
+                }
+            }
+            tr:last-child{border-bottom: none;}
+
+            .name{
+                font-weight: 500;
+                color: hsl(30, 10%, 34%);
+            }
+
+            .data{
+                color: hsl(14, 45%, 36%);
+            }
+        }
+    }
+}
