@@ -8,7 +8,7 @@
 }
 @media screen and (min-width:1440px) {   
     body{
-        padding: 5% 15% 5% 15%;
+        padding: 5% 15% 15% 15%;
         background-color: hsl(30, 54%, 90%);
     }
     
@@ -31,6 +31,7 @@
 
     .ingredients{
         & ul{
+            padding: 2% 0 2% 0;
             font-size: 1.3vmin;
         }
     }
@@ -42,7 +43,33 @@
     }
 
     .nutrition-table{
-        font-size: 3.1vmin;
+        width: 100%;
+        box-sizing: border-box;
+        thead{
+            padding: 0;
+            tr{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                border-bottom: 1px solid hsl(30, 18%, 87%);
+                column-gap: 1em;
+                text-align: left;
+                & th{
+                    font-size: 4.3vmin;
+                    min-width: 150px;
+                }
+            }
+            tr:last-child{border-bottom: none;}
+
+            .name{
+                font-weight: 500;
+                color: hsl(30, 10%, 34%);
+            }
+
+            .data{
+                color: hsl(14, 45%, 36%);
+            }
+        }
     }
 }
 
@@ -87,7 +114,7 @@
         background-color: hsl(330, 100%, 98%);
         margin: 0 8% 0 8%;
         
-        & h3{
+        & h2{
             color:hsl(332, 51%, 32%) ;
             font-size: 4.5vmin;
         }
@@ -168,17 +195,18 @@
     }
     .nutrition-table{
         width: 100%;
+        box-sizing: border-box;
         thead{
+            padding: 0;
             tr{
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                padding: 2%;
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid hsl(30, 18%, 87%);
                 column-gap: 1em;
                 text-align: left;
-                th{
-                    width: 200px;
+                & th{
+                    min-width: 150px;
                 }
             }
             tr:last-child{border-bottom: none;}
